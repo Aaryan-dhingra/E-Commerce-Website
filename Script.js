@@ -1,32 +1,35 @@
-// Adding to Cart
-let cart = [];
+// Adding items to the cart
+const cart = [];
 
-function addToCart(product, price) {
-    cart.push({ product, price });
-    alert(`${product} has been added to your cart!`);
-    updateCart();
-}
+// Add to Cart button event listener
+document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const productName = e.target.getAttribute('data-product');
+        const productPrice = e.target.getAttribute('data-price');
+        
+        // Add product to cart
+        cart.push({ name: productName, price: productPrice });
 
-function updateCart() {
-    const cartItemsDiv = document.getElementById('cart-items');
-    if (!cartItemsDiv) return;  // If cart is not loaded, return
+        // Update cart count on the page
+        document.getElementById('cart-count').innerText = cart.length;
 
-    cartItemsDiv.innerHTML = '';
-    let total = 0;
-    cart.forEach(item => {
-        cartItemsDiv.innerHTML += `<div class="cart-item"><p>${item.product} - $${item.price}</p></div>`;
-        total += item.price;
+        // Show a confirmation message
+        alert(`${productName} has been added to your cart!`);
     });
-    cartItemsDiv.innerHTML += `<h3>Total: $${total}</h3>`;
+});
+
+// Updating the cart count when the page loads
+window.onload = function() {
+    const cartCount = localStorage.getItem('cartCount');
+    if (cartCount) {
+        document.getElementById('cart-count').innerText = cartCount;
+    }
 }
 
-// Contact form submission handler
-document.getElementById("contact-form").addEventListener("submit", function(event){
-    event.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-    
-    alert(`Thank you ${name}! Your message has been received. We will respond to ${email} soon.`);
-    document.getElementById("contact-form").reset();
+// Save the cart count to localStorage when items are added
+document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const currentCartCount = document.getElementById('cart-count').innerText;
+        localStorage.setItem('cartCount', currentCartCount);
+    });
 });
