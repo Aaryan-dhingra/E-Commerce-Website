@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpicifyKart</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Css/Style.Css">
 </head>
 <body>
     <header>
@@ -24,8 +24,12 @@
 
     <main>
         <!-- Home Page Section -->
-        <section>
+        <section class="intro">
             <h2>Welcome to SpicifyKart</h2>
+            <p>Your one-stop shop for exciting products! Discover amazing deals and exclusive offers.</p>
+        </section>
+
+        <section class="products">
             <div class="product-list">
                 <div class="product">
                     <img src="product1.jpg" alt="Product 1">
@@ -39,11 +43,17 @@
                     <p>$35.99</p>
                     <button onclick="addToCart('Product 2', 35.99)">Add to Cart</button>
                 </div>
+                <div class="product">
+                    <img src="product3.jpg" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>$45.99</p>
+                    <button onclick="addToCart('Product 3', 45.99)">Add to Cart</button>
+                </div>
             </div>
         </section>
 
         <!-- Contact Us Section -->
-        <section id="contact-us">
+        <section id="contact-us" class="contact-us">
             <h2>Contact Us</h2>
             <form id="contact-form">
                 <label for="name">Your Name:</label>
@@ -62,12 +72,12 @@
 
     <footer>
         <div class="footer-container">
-            <p>&copy; 2025 SpicifyKart</p>
+            <p>&copy; 2025 SpicifyKart | All rights reserved</p>
             <p>Contact us at: support@spicifykart.com</p>
             <p>Follow us: Facebook | Twitter | Instagram</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="Script.js"></script>
 </body>
 </html>

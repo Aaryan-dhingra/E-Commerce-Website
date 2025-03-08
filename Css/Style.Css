@@ -1,13 +1,15 @@
 /* General styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #fafafa;
     color: #333;
     margin: 0;
+    padding: 0;
 }
 
+/* Header and Navigation */
 header {
-    background: linear-gradient(45deg, #ff7f50, #ff6347);
+    background: linear-gradient(45deg, #ff6f61, #f9a825);
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -42,27 +44,21 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #f2f2f2;
+    color: #ffeb3b;
 }
 
-footer {
-    background-color: #333;
-    color: white;
+/* Main Section */
+.intro {
+    background-color: #ffeb3b;
+    color: #333;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 1.5rem;
+}
+
+.products {
     padding: 20px;
     text-align: center;
-    margin-top: 50px;
-}
-
-footer p {
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-
-/* Main content */
-main {
-    margin-top: 30px;
-    text-align: center;
-    padding: 20px;
 }
 
 .product-list {
@@ -70,15 +66,22 @@ main {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .product {
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 250px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .product img {
@@ -88,7 +91,7 @@ main {
 
 .product h3 {
     font-size: 1.5rem;
-    color: #ff6347;
+    color: #ff6f61;
     margin-top: 10px;
 }
 
@@ -99,7 +102,7 @@ main {
 }
 
 .product button {
-    background-color: #ff6347;
+    background-color: #ff6f61;
     color: white;
     border: none;
     padding: 10px;
@@ -111,16 +114,24 @@ main {
     margin-top: 15px;
 }
 
-.product:hover {
-    transform: translateY(-10px);
-}
-
 .product button:hover {
-    background-color: #ff7f50;
+    background-color: #f9a825;
     transform: scale(1.05);
 }
 
-/* Contact Page Styles */
+/* Contact Us Section */
+.contact-us {
+    background-color: #f9a825;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
 form {
     background-color: white;
     padding: 20px;
@@ -147,7 +158,7 @@ form input, form textarea {
 }
 
 form button {
-    background-color: #ff6347;
+    background-color: #ff6f61;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -158,9 +169,24 @@ form button {
 }
 
 form button:hover {
-    background-color: #ff7f50;
+    background-color: #f9a825;
 }
 
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .product-list {
         flex-direction: column;
