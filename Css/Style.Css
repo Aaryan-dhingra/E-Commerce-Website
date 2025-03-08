@@ -1,0 +1,141 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(45deg, #ff7f50, #ff6347);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f2f2f2;
+}
+
+main {
+    margin-top: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    color: #ff6347;
+    margin-top: 10px;
+}
+
+.product p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+.product button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product button:hover {
+    background-color: #ff7f50;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+    }
+
+    .product {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
