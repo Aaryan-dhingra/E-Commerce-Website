@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Kartify.in</title>
+    <link rel="stylesheet" href="Css/Style4.Css">
+    <script src="Script2.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Kartify.in Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Shop Filter Section -->
+    <section class="shop-filters">
+        <div class="filter">
+            <h3>Categories</h3>
+            <select id="categoryFilter" onchange="filterProducts()">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="home">Home & Furniture</option>
+                <option value="toys">Toys & Games</option>
+            </select>
+        </div>
+        <div class="filter">
+            <h3>Sort By</h3>
+            <select id="sortFilter" onchange="sortProducts()">
+                <option value="default">Default</option>
+                <option value="price-low-high">Price: Low to High</option>
+                <option value="price-high-low">Price: High to Low</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Shop Products Section -->
+    <section class="shop-products">
+        <h2>Shop Our Products</h2>
+        <div class="product-list">
+            <!-- Example Product Cards -->
+            <div class="product-card" data-category="electronics">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$99.99</p>
+                <button class="add-to-cart-btn" data-product="Product 1" data-price="99.99">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="fashion">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$199.99</p>
+                <button class="add-to-cart-btn" data-product="Product 2" data-price="199.99">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="home">
+                <img src="product3.jpg" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$149.99</p>
+                <button class="add-to-cart-btn" data-product="Product 3" data-price="149.99">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="toys">
+                <img src="product4.jpg" alt="Product 4">
+                <h3>Product 4</h3>
+                <p>$249.99</p>
+                <button class="add-to-cart-btn" data-product="Product 4" data-price="249.99">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kartify.in. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
